@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: hsl(218, 23%, 16%);
+  color: hsl(193, 38%, 86%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  width: 444px;
+  height: 290px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: hsl(217, 19%, 24%);
+}
+main h1 {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: hsl(150, 100%, 66%);
+  font-weight: 800;
+}
+main h1 span {
+  font-weight: 800;
+}
+main .advice_text {
+  text-align: center;
+  padding: 0 2rem;
+  font-weight: 800;
+}
+main .separator {
+  width: 50%;
+  overflow: hidden;
+}
+main .btn_generator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  bottom: -17px;
+  border-radius: 50%;
+  background-color: hsl(150, 100%, 66%);
+}
+main .btn_generator button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
