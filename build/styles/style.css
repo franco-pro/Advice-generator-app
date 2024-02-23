@@ -11,10 +11,17 @@ body {
   color: hsl(193, 38%, 86%);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: auto 0;
+  margin: auto;
   width: 100vw;
   height: 100vh;
+}
+body a {
+  text-decoration: none;
+}
+body a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -48,22 +55,86 @@ main .advice_text {
 main .separator {
   width: 50%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .btn_generator {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   bottom: -17px;
   border-radius: 50%;
   background-color: hsl(150, 100%, 66%);
+}
+main .btn_generator svg {
+  transform: scale(-0.7);
+  opacity: 1;
+}
+main .btn_generator svg:hover {
+  transform: scale(-0.8);
+  transition: ease-in-out 0.5s;
 }
 main .btn_generator button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+}
+main .btn_generator button:hover {
+  box-shadow: 0px 0px 10px 10px hsl(150, 100%, 66%);
+  border-radius: 20px;
+}
+main .spinner {
+  position: absolute;
+  bottom: -15px;
+  left: 46.8%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: opacity 0.75s, visivility 0.75s;
+  cursor: not-allowed;
+}
+main .spinner::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 5px solid #000;
+  border-top-color: #7449f5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotage(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+main .spinner_hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  body main {
+    display: flex;
+    width: 380px;
+    font-size: 12px;
+  }
+  body .attribution {
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
