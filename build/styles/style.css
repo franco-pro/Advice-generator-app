@@ -23,8 +23,7 @@ body a {
 body a:hover {
   text-decoration: underline;
 }
-
-main {
+body main {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -38,28 +37,28 @@ main {
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
   background-color: hsl(217, 19%, 24%);
 }
-main h1 {
+body main h1 {
   font-size: 14px;
   letter-spacing: 3px;
   color: hsl(150, 100%, 66%);
   font-weight: 800;
 }
-main h1 span {
+body main h1 span {
   font-weight: 800;
 }
-main .advice_text {
+body main .advice_text {
   text-align: center;
   padding: 0 2rem;
   font-weight: 800;
 }
-main .separator {
+body main .separator {
   width: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .btn_generator {
+body main .btn_generator {
   position: absolute;
   display: flex;
   align-items: center;
@@ -70,15 +69,15 @@ main .btn_generator {
   border-radius: 50%;
   background-color: hsl(150, 100%, 66%);
 }
-main .btn_generator svg {
+body main .btn_generator svg {
   transform: scale(-0.7);
   opacity: 1;
 }
-main .btn_generator svg:hover {
+body main .btn_generator svg:hover {
   transform: scale(-0.8);
   transition: ease-in-out 0.5s;
 }
-main .btn_generator button {
+body main .btn_generator button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -87,11 +86,11 @@ main .btn_generator button {
   height: 25px;
   margin: auto;
 }
-main .btn_generator button:hover {
+body main .btn_generator button:hover {
   box-shadow: 0px 0px 10px 10px hsl(150, 100%, 66%);
   border-radius: 20px;
 }
-main .spinner {
+body main .spinner {
   position: absolute;
   bottom: -15px;
   left: 46.8%;
@@ -104,7 +103,7 @@ main .spinner {
   transition: opacity 0.75s, visivility 0.75s;
   cursor: not-allowed;
 }
-main .spinner::after {
+body main .spinner::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -121,18 +120,38 @@ main .spinner::after {
     transform: rotate(1turn);
   }
 }
-main .spinner_hidden {
+body main .spinner_hidden {
   opacity: 0;
   visibility: hidden;
+}
+body .attribution {
+  font-size: 12px;
+}
+body .cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+}
+body .cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+body .cursor-dot,
+body .cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 500px) {
   body main {
     display: flex;
     width: 380px;
-    font-size: 12px;
-  }
-  body .attribution {
     font-size: 12px;
   }
 }
